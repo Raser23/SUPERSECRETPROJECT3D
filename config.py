@@ -6,4 +6,4 @@ VKTOKEN = os.environ.get('VKAPI')
 
 print(VKTOKEN)
 
-HOST = 'https://jumoreski.herokuapp.com'
+HOST = 'https://xxxsecretprojectxxx.herokuapp.com'
