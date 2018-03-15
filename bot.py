@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
 import config
 import os
 
@@ -13,15 +13,19 @@ server = Flask(__name__)
 
 @server.route("/")
 def webhook():
-
-    return "ok", 200
+    return render_template('hello.html')
 
 @server.route("/wakeup")
 def wakeup():
     #print("pinged")
     return "Never sleeps", 200
 
+@server.route('/startQuest/<int:usedId>')
+def show_post(usedId):
+    # show the post with the given id, the id is an integer
 
+    print(usedId)
+    return 'Post %d' % usedId
 
 import NotSleeping
 server.run(host="0.0.0.0", port=os.environ.get('PORT', 5000))

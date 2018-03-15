@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Запуск супер веб квеста</title>
+</head>
+
+<script>
+
+    var HttpClient = function() {
+    this.get = function(aUrl, aCallback) {
+        var anHttpRequest = new XMLHttpRequest();
+        anHttpRequest.onreadystatechange = function() {
+            if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200)
+                aCallback(anHttpRequest.responseText);
+        }
+
+        anHttpRequest.open( "GET", aUrl, true );
+        anHttpRequest.send( null );
+    }
+    }
+
+    function start(){
+    var client = new HttpClient();
+    client.get('https://xxxsecretprojectxxx.herokuapp.com/startQuest/'+$("#userId").val(), function(response) {
+        // do something with response
+    });
+    }
+
+</script>
+
+<body>
+
+    <h3>Введите id пользователя для которого начать квест</h3>
+    <input type="text" size="40" id = "userId">
+    <button onclick="start()">Погнали</button>
+</body>
+</html>
