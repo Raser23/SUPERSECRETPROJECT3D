@@ -7,4 +7,4 @@ VKTOKENR2 = os.environ.get('VKAPI1')
 
 print(VKTOKENR2)
 
-HOST = 'https://xxxsecretprojectxxx.herokuapp.com'
+HOST = 'http://xxxsecretprojectxxx.herokuapp.com'

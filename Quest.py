@@ -176,6 +176,8 @@ def Rybkin(user,number,id):
 def Quester():
 
     while(True):
+        #print("here")
+        print(users)
         delete = []
         for user in users:
             if(users[user]["questEnded"]):
