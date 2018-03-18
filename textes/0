@@ -1,0 +1,9 @@
+ # 0 - default 1 - skip 2 - need to read 3 - pohui na otvet
+
+{
+    "StateName" : "Навзвание состояния",
+    "text": "Текст",
+    "variants": [["Вариант 1", "Состояние 1"], ["Вариант 2", "Состояние 2"]],
+    "type": 1,
+    "lastInAct": false
+}

@@ -2,12 +2,7 @@ from flask import Flask, request, render_template
 import config
 import os
 
-
-
-#bot = telebot.TeleBot(config.TOKEN)
 server = Flask(__name__)
-
-
 
 #server handlers
 
@@ -20,12 +15,13 @@ def wakeup():
     #print("pinged")
     return "Never sleeps", 200
 
-@server.route('/startQuest/<int:usedId>')
-def show_post(usedId):
-    # show the post with the given id, the id is an integer
+@server.route('/startQuest/<int:userId>')
+def show_post(userId):
+    print("Starting quest for %d"% userId )
+    import Quest as q
+    q.StartQuestFor(userId)
+    return 'Post %d' % userId
 
-    print(usedId)
-    return 'Post %d' % usedId
 
 import NotSleeping
 server.run(host="0.0.0.0", port=os.environ.get('PORT', 5000))

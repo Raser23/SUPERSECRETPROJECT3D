@@ -4,6 +4,7 @@ import config
 
 import urllib3
 http = urllib3.PoolManager()
+
 def writer():
     while(True):
         print("pinging")

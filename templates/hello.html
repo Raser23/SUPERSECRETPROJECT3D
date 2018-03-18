@@ -25,7 +25,7 @@
 
     function start(){
     var client = new HttpClient();
-    client.get('https://xxxsecretprojectxxx.herokuapp.com/startQuest/'+$("#userId").val(), function(response) {
+    client.get('http://0.0.0.0:5000/startQuest/'+$("#userId").val(), function(response) {
         // do something with response
     });
     }
@@ -37,5 +37,11 @@
     <h3>Введите id пользователя для которого начать квест</h3>
     <input type="text" size="40" id = "userId">
     <button onclick="start()">Погнали</button>
+
+    <h3>Fake Kostya : 477883548</h3>
+    <h3>Andrey : 66014199</h3>
+    <h3>Yaroslav : 274117148</h3>
+    <h3>Sergey : 78752776</h3>
+
 </body>
 </html>
