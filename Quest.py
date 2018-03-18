@@ -194,7 +194,7 @@ def Quester():
                 Rybkin(userRybkin2, 2, user)
         for d in delete:
             del users[d]
-        time.sleep(3)
+        time.sleep(7)
 
 
 
