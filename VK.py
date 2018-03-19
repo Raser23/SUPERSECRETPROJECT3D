@@ -144,12 +144,12 @@ class VKUser:
         pass
 
     def SendMessageToUser(self,userId,message):
-        try:
+        #try:
             self.api.messages.send(user_id = userId, peer_id = (userId), message = message,v = 5.73)
             return True
-        except:
-            print("error")
-            return False
+        #except:
+        #    print("error")
+        #    return False
 
     # 78752776 106
     # 477883548
