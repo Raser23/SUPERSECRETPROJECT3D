@@ -27,6 +27,8 @@ def NextAct(id):
         users[id]["currentRybkin"] = 2
         users[id]["currentState"] = "2.1"
         users[id]["sendedMessage"] = True
+        users[id]["questEnded"] = True
+
     if(users[id]["currentAct"] == 2):
         users[id]["currentRybkin"] = 1
         users[id]["currentState"] = "3.1"
@@ -40,8 +42,8 @@ def NextAct(id):
 
 def LoadStates():
 
-    addQuestState("1.1")
-    addQuestState("2.1")
+    #addQuestState("1.1")
+    #addQuestState("2.1")
     addQuestState("3.1")
 
     print(states)
@@ -162,6 +164,7 @@ def Rybkin(user,number,id):
             users[id]["sendedMessage"] = False
 
     else:
+        print("Ожидаю сообщения")
         messages = user.GetHistory(users[id]["userId"])[1:]
         if (len(messages) == 0):
             return
@@ -171,7 +174,8 @@ def Rybkin(user,number,id):
                 GetMessage(user,number,lastMessage['body'],id)
             else:
                 SendMessage(user,personagePhrases[number]["NotMyTurn"],id)
-
+        else:
+            print("Ничего интересного")
 
 def Quester():
 
