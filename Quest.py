@@ -41,7 +41,7 @@ def NextAct(id):
 
 
 def LoadStates():
-
+    global states
     #addQuestState("1.1")
     #addQuestState("2.1")
     #addQuestState("3.1")
