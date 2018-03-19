@@ -16,7 +16,7 @@ states ={}
 
 def StartQuestFor(id):
     obj = {"userId": id, "questEnded": False, "currentState": "-1", "currentAct": 1, "currentRybkin": 1,
-           "sendedMessage": False}
+           "sendedMessage": True}
 
     users[id] = obj
 
