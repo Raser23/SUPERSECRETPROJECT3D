@@ -4,7 +4,7 @@ import config as CFG
 from VK import VKUser as vkUser
 import json
 
-users = states = {107276837: {'userId': 107276837, 'questEnded': False, 'currentState': '1.1', 'currentAct': 1, 'currentRybkin': 1, 'sendedMessage': True}}
+users  = {107276837: {'userId': 107276837, 'questEnded': False, 'currentState': '1.1', 'currentAct': 1, 'currentRybkin': 1, 'sendedMessage': True}}
 
 
 personagePhrases = {}
