@@ -4,7 +4,8 @@ import config as CFG
 from VK import VKUser as vkUser
 import json
 
-users = {}
+users = states = {107276837: {'userId': 107276837, 'questEnded': False, 'currentState': '1.1', 'currentAct': 1, 'currentRybkin': 1, 'sendedMessage': True}}
+
 
 personagePhrases = {}
 
@@ -42,10 +43,9 @@ def NextAct(id):
 
 def LoadStates():
     global states
-    #addQuestState("1.1")
-    #addQuestState("2.1")
-    #addQuestState("3.1")
-    states = {107276837: {'userId': 107276837, 'questEnded': False, 'currentState': '1.1', 'currentAct': 1, 'currentRybkin': 1, 'sendedMessage': True}}
+    addQuestState("1.1")
+    addQuestState("2.1")
+    addQuestState("3.1")
 
     print(states)
 
