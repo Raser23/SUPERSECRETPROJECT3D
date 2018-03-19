@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template
 import config
 import os
+import Quest as q
 
 server = Flask(__name__)
 
@@ -18,7 +19,7 @@ def wakeup():
 @server.route('/startQuest/<int:userId>')
 def show_post(userId):
     print("Starting quest for %d"% userId )
-    import Quest as q
+
     q.StartQuestFor(userId)
     return 'Post %d' % userId
 
