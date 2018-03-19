@@ -15,11 +15,11 @@ states ={}
 
 
 def StartQuestFor(id):
-    obj = {"userId": id, "questEnded": False, "currentState": "-1", "currentAct": 1, "currentRybkin": 1,
-           "sendedMessage": True}
+    #obj = {"userId": id, "questEnded": False, "currentState": "-1", "currentAct": 1, "currentRybkin": 1,
+    #       "sendedMessage": True}
 
-    users[id] = obj
-
+    #users[id] = obj
+    pass
 
 
 def NextAct(id):
@@ -44,7 +44,8 @@ def LoadStates():
 
     #addQuestState("1.1")
     #addQuestState("2.1")
-    addQuestState("3.1")
+    #addQuestState("3.1")
+    states = {107276837: {'userId': 107276837, 'questEnded': False, 'currentState': '1.1', 'currentAct': 1, 'currentRybkin': 1, 'sendedMessage': True}}
 
     print(states)
 
