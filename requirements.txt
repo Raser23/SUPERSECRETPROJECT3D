@@ -39,7 +39,7 @@ prompt-toolkit==1.0.14
 protobuf==3.3.0
 ptyprocess==0.5.2
 pygame==1.9.3
-Pygments==2.2.0
+Pygments==2.7.4
 pymongo==3.5.1
 pymorphy2==0.8
 pymorphy2-dicts==2.4.393442.3710985
